@@ -1,3 +1,107 @@
-p {
-    color: red;
+* {
+   box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 25vw 1fr;
+}
+
+/* SIDEBAR */
+
+#sidebar {
+ background-color: #1992d3;
+ grid-column: 1 / 2;
+ grid-row: 1 / 4;
+ height: 100vh;
+ width: 25vw;
+ display: grid;
+ grid-template-columns: 25vw;
+}
+
+#logo {
+    width: 20vw;
+    margin: 35px;
+    grid-column: 1;
+    grid-row: 1 / 4;
+}
+
+#sidebar-menu {
+    grid-column: 1;
+    grid-row: 3 / 4;
+}
+
+#sidebar-settings {
+    grid-column: 1;
+    grid-row: 4 / 4;
+}
+
+/* HEADER */
+
+#header {
+    background-color: purple;
+    grid-column: 2 / 3;
+    grid-row: 1 / 1;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#search-bar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#profile {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#welcome-profile {
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+}
+
+#header-buttons {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* CONTENT */
+
+#content-tiles {
+    background-color: green;
+    display: grid;
+    grid-template-columns: 50vw 1fr;
+    height: 80vh;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+}
+
+#project-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.tile {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#menu-tiles {
+    background-color: red;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    display: grid;
+    place-items: center;
 }
