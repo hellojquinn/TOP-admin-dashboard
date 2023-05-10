@@ -1,5 +1,7 @@
 * {
-   box-sizing: border-box; 
+    box-sizing: border-box; 
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
 }
 
 body {
@@ -8,7 +10,7 @@ body {
 
 #container {
     display: grid;
-    grid-template-columns: 25vw 1fr;
+    grid-template-columns: 15vw 1fr;
 }
 
 /* SIDEBAR */
@@ -18,22 +20,40 @@ body {
  grid-column: 1 / 2;
  grid-row: 1 / 4;
  height: 100vh;
- width: 25vw;
  display: grid;
  grid-template-columns: 25vw;
 }
 
-#logo {
-    width: 20vw;
-    margin: 35px;
-    grid-column: 1;
-    grid-row: 1 / 4;
-}
-
 #sidebar-menu {
     grid-column: 1;
-    grid-row: 3 / 4;
+    grid-row: 2 / 4;
+    list-style-type: none;
+    display: grid;
+    grid-auto-rows: max-content;
+    padding-left: 20px;
+    row-gap: 18px;
+    font-size: 16px;
+    font-weight: 900;
+    margin-top: -100px;
 }
+
+#sidebar-menu a {
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-left: 41px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+a:visited {
+    color: white;
+}
+
+#divider {
+    height: 2vh;
+}
+
 
 #sidebar-settings {
     grid-column: 1;
@@ -104,4 +124,54 @@ body {
     grid-row: 1 / 4;
     display: grid;
     place-items: center;
+}
+
+/* ICONS */
+
+#icon-logo {
+    background-image: url(img/logo.svg);
+    background-repeat: no-repeat;
+    text-decoration: none;
+    padding-left: 50px;
+    padding-top: 10px;
+    font-size: 22px;
+    font-weight: 900;
+    margin: 10px;
+    background-size: 40px;
+}
+
+#icon-home {
+    background-image: url(img/home.svg);
+}
+
+#icon-profile {
+    background-image: url(img/profile.svg);
+}
+
+#icon-messages {
+    background-image: url(img/messages.svg);
+}
+
+#icon-history {
+    background-image: url(img/history.svg);
+}
+
+#icon-tasks {
+    background-image: url(img/tasks.svg);
+}
+
+#icon-communities {
+    background-image: url(img/communities.svg);
+}
+
+#icon-settings {
+    background-image: url(img/settings.svg);
+}
+
+#icon-support {
+    background-image: url(img/support.svg);
+}
+
+#icon-privacy {
+    background-image: url(img/privacy.svg);
 }
