@@ -18,6 +18,10 @@ h2 {
     color: #767676;
 }
 
+hr {
+    color: #767676;
+}
+
 body {
     margin: 0;
 }
@@ -201,18 +205,27 @@ a:visited {
 #your-projects {
     margin-left: 20px;
     margin-top: 25px;
+    grid-column: 1 / 2;
 }
 
 #project-tiles {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 22px;
+    grid-template-columns: 28vw 28vw;
+    grid-gap: 25px;
     margin-left: 20px;
     margin-right: 20px;
+    width: 58vw;
+    grid-auto-flow: row;
 }
 
+@media screen and (max-width: 900px) {
+    #project-tiles {
+      grid-template-columns: 28vw
+    }
+  }
+
 .tile {
-    width: 375px;
+    width: 400px;
     height: 200px;
     border: none;
     background-color: white;
@@ -242,11 +255,77 @@ a:visited {
     margin-bottom: -10px;
 }
 
+/* ANNOUNCEMENTS MENU */
+
 #menu-tiles {
+    width: 27vw;
     grid-column: 2 / 3;
     grid-row: 1 / 4;
     display: grid;
-    place-items: center;
+    grid-row-gap: 20px;
+}
+
+#announcements-title {
+    margin-top: 27.5px;
+}
+
+#announcement-tile {
+    border: none;
+    background-color: white;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    width: 20vw;
+    height: 350px;
+    margin-top: -55px;
+    padding: 25px;
+}
+
+#trending-title {
+    margin-top: -40px;
+}
+
+#trending-tile {
+    border: none;
+    background-color: white;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    width: 20vw;
+    height: 220px;
+    margin-top: -60px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 50px 200px;
+}
+
+.trending-text {
+    margin-top: 2px;
+}
+
+#icon-zebra {
+    background-image: url(img/zebra.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+}
+
+#icon-canary {
+    background-image: url(img/canary.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+}
+
+#icon-dove {
+    background-image: url(img/dove.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
 }
 
 /* ICONS */
