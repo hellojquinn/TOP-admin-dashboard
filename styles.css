@@ -1,7 +1,21 @@
 * {
     box-sizing: border-box; 
     font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    font-size: 18px;
     font-weight: 900;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.p-tile {
+    font-size: 14px;
+    color: #767676;
 }
 
 body {
@@ -110,6 +124,11 @@ a:visited {
     margin-right: 50px;
 }
 
+#profile-name {
+    font-size: 14px;
+    font-weight: 900;
+}
+
 #icon-bell {
     background-image: url(img/bell.svg);
     background-repeat: no-repeat;
@@ -171,23 +190,56 @@ a:visited {
 #content-tiles {
     background-color: #e2e8f0;
     display: grid;
-    grid-template-columns: 50vw 1fr;
-    height: 80vh;
+    grid-template-columns: 2fr 1fr;
+    height: 78vh;
     grid-column: 2 / 3;
     grid-row: 2 / 4;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+#your-projects {
+    margin-left: 20px;
+    margin-top: 25px;
 }
 
 #project-tiles {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 22px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .tile {
-    width: 200px;
+    width: 375px;
     height: 200px;
-    border: 1px solid black;
+    border: none;
     background-color: white;
+    background: linear-gradient(to right, #ffc107, #ffc107 10px, #fff 10px, #fff);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    padding: 20px 30px 20px 30px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.tile-buttons {
+    align-self: end;
+    margin-right: -20px;
+    position: absolute;
+}
+
+.tile-buttons a {
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-left: 40px;
+    text-decoration: none;
+}
+
+.project-title {
+    margin-bottom: -10px;
 }
 
 #menu-tiles {
@@ -245,4 +297,16 @@ a:visited {
 
 #icon-privacy {
     background-image: url(img/privacy.svg);
+}
+
+#icon-star {
+    background-image: url(img/star.svg);
+}
+
+#icon-eye {
+    background-image: url(img/eye.svg);
+}
+
+#icon-fork {
+    background-image: url(img/fork.svg);
 }
